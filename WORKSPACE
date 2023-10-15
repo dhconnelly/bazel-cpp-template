@@ -1,5 +1,7 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+# c++ bazel rules
+
 http_archive(
     name = "rules_cc",
     urls = ["https://github.com/bazelbuild/rules_cc/releases/download/0.0.9/rules_cc-0.0.9.tar.gz"],
@@ -9,6 +11,8 @@ http_archive(
 
 load("@rules_cc//cc:repositories.bzl", "rules_cc_dependencies")
 rules_cc_dependencies()
+
+# protobuf
 
 http_archive(
     name = "rules_proto",
@@ -21,8 +25,18 @@ load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_
 rules_proto_dependencies()
 rules_proto_toolchains()
 
+# googletest
+
 http_archive(
   name = "com_google_googletest",
-  urls = ["https://github.com/google/googletest/archive/5ab508a01f9eb089207ee87fd547d290da39d015.zip"],
-  strip_prefix = "googletest-5ab508a01f9eb089207ee87fd547d290da39d015",
+  urls = ["https://github.com/google/googletest/archive/f8d7d77c06936315286eb55f8de22cd23c188571.zip"],
+  strip_prefix = "googletest-f8d7d77c06936315286eb55f8de22cd23c188571",
+)
+
+# abseil
+
+http_archive(
+  name = "com_google_absl",
+  urls = ["https://github.com/abseil/abseil-cpp/archive/fb3621f4f897824c0dbe0615fa94543df6192f30.zip"],
+  strip_prefix = "abseil-cpp-fb3621f4f897824c0dbe0615fa94543df6192f30",
 )

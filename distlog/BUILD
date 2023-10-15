@@ -24,5 +24,8 @@ cc_test(
 cc_binary(
     name = "main",
     srcs = ["main.cc"],
-    deps = [":greeting_cc_proto"],
+    deps = [
+        ":greeting_cc_proto",
+        "@com_google_absl//absl/strings",
+    ],
 )
