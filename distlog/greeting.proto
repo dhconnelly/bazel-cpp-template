@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package distlog;
+
+message Greeting {
+    optional string greeter = 1;
+    optional string greeted = 2;
+    optional string greeting = 3;
+}
