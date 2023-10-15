@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "distlog/greeting.pb.h"
+#include "bazel_cpp_template/greeting.pb.h"
 
-using distlog::Greeting;
+using bazel_cpp_template::Greeting;
 using testing::Property;
 
 TEST(Foo, Bar) {

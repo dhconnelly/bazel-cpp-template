@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package distlog;
+package bazel_cpp_template;
 
 message Greeting {
     optional string greeter = 1;
